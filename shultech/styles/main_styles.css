@@ -519,7 +519,7 @@ section
 }
 .account_selection li a:hover
 {
-	color: #b5aec4;
+	color: #8ec641;
 }
 .account_selection li:last-child a
 {
@@ -920,7 +920,7 @@ section
 .banner_category a
 {
 	display: block;
-	color: #1e1e27;
+	color: #75ab2c;
 	text-transform: uppercase;
 	font-size: 22px;
 	font-weight: 600;
@@ -935,7 +935,7 @@ section
 }
 .banner_category a:hover
 {
-	color: #b5aec4;
+	color: #1d1c1d;
 }
 
 /*********************************
