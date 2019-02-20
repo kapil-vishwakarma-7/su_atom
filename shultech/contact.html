@@ -15,10 +15,16 @@
 <link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+    
+    <style>
+     .footer{
+             background: #212121;
+         }
+    </style>
 </head>
-
+    
 <body>
-
 <div class="super_container">
 
 	<!-- Header -->
@@ -31,38 +37,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<div class="top_nav_left">free shipping on all India</div>
+						<div class="top_nav_left">free shipping</div>
 					</div>
 					<div class="col-md-6 text-right">
 						<div class="top_nav_right">
 							<ul class="top_nav_menu">
 
-								<!-- Currency / Language / My Account -->
+								<!- My Account -->
 
-								<li class="currency">
-									<a href="#">
-										usd
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="currency_selection">
-										<li><a href="#">cad</a></li>
-										<li><a href="#">aud</a></li>
-										<li><a href="#">eur</a></li>
-										<li><a href="#">gbp</a></li>
-									</ul>
-								</li>
-								<li class="language">
-									<a href="#">
-										English
-										<i class="fa fa-angle-down"></i>
-									</a>
-									<ul class="language_selection">
-										<li><a href="#">French</a></li>
-										<li><a href="#">Italian</a></li>
-										<li><a href="#">German</a></li>
-										<li><a href="#">Spanish</a></li>
-									</ul>
-								</li>
+							
 								<li class="account">
 									<a href="#">
 										My Account
@@ -87,15 +70,15 @@
 				<div class="row">
 					<div class="col-lg-12 text-right">
 						<div class="logo_container">
-							<a href="#">colo<span>shop</span></a>
+							<a href="#"><img src="images/logo.png" width="75"height="75"></a>
 						</div>
 						<nav class="navbar">
 							<ul class="navbar_menu">
-								<li><a href="index.html">home</a></li>
+								<li><a href="#">home</a></li>
 								<li><a href="#">shop</a></li>
-								<li><a href="#">promotion</a></li>
-								<li><a href="#">pages</a></li>
-								<li><a href="#">blog</a></li>
+								<!--<li><a href="#">promotion</a></li>-->
+								<li><a href="#">about</a></li>
+								<!--<li><a href="#">blog</a></li>-->
 								<li><a href="contact.html">contact</a></li>
 							</ul>
 							<ul class="navbar_user">
@@ -118,6 +101,37 @@
 		</div>
 
 	</header>
+		<!-- Main Navigation -->
+
+		<div class="main_nav_container">
+			<div class="hamburger_menu">
+		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		<div class="hamburger_menu_content text-right">
+			<ul class="menu_top_nav">
+				
+				
+				<li class="menu_item has-children">
+					<a href="#">
+						My Account
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="#">home</a></li>
+				<li class="menu_item"><a href="#">shop</a></li>
+				<li class="menu_item"><a href="#">promotion</a></li>
+				<li class="menu_item"><a href="#">pages</a></li>
+				<li class="menu_item"><a href="#">blog</a></li>
+				<li class="menu_item"><a href="#">contact</a></li>
+			</ul>
+		</div>
+	</div>
+		</div>
+
+	
 
 	<div class="fs_menu_overlay"></div>
 
@@ -193,7 +207,11 @@
 			<div class="col">
 				<div id="google_map">
 					<div class="map_container">
-						<div id="map"></div>
+						<div id="map">
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d3665.815001944789!2d77.46914796497195!3d23.249818134838478!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d23.249841699999998!2d77.4712677!4m5!1s0x397c4203e513c28f%3A0x15442925d721f3ba!2sbeangate!3m2!1d23.249800399999998!2d77.47132669999999!5e0!3m2!1sen!2sin!4v1550657417798" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -246,7 +264,9 @@
 							<textarea id="input_message" class="input_ph input_message" name="message"  placeholder="Message" rows="3" required data-error="Please, write us a message."></textarea>
 						</div>
 						<div>
-							<button id="review_submit" type="submit" class="red_button message_submit_btn trans_300" value="Submit">send message</button>
+                            <button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">send</button>
+                            
+							
 						</div>
 					</form>
 				</div>
@@ -263,7 +283,7 @@
 				<div class="col-lg-6">
 					<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
 						<h4>Newsletter</h4>
-						<p>Subscribe to our newsletter and get 20% off your first purchase</p>
+						<p>Subscribe to our newsletter and get new offer.</p>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -280,37 +300,75 @@
 
 	<!-- Footer -->
 
-	<footer class="footer">
+		<footer class="footer">
+      <hr>
+		<div class="container-fluid">
+			<div class="row">
+				
+					<div class="col-lg-2">
+                    <span class="footer_top">About</span>
+                        <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">Contact </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">About </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Contact </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                    <span class="footer_top">Help</span>
+                         <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">FAQ </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Payments </a></li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Feedback </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                    <span class="footer_top">Policy</span>
+                         <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">Terms of Use</a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Privacy </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Sitemap </a> </li>
+                        </ul>
+                    </div>
+                   <div class="col-lg-3">
+                    <span class="footer_top">Contact Info</span>
+                        <ul class="footer_ul">
+                        <li class="footer_li"><b>Mail Us: </b><a href="mailto:test@test.com" target="_blank" class="footer_li_a">support@shultech.com</a> </li>
+                            <li class="footer_li"><b>Call Us: </b>+91 9949493949, 8978541280  </li>
+                        </ul>
+                    </div>
+                <div class="col-lg-3">
+                    <span class="footer_top">Office Address</span>
+                     <ul class="footer_ul">
+                        <li class="footer_li"><b>Shop no. :</b> 21, Near Mall </li>
+                            <li class="footer_li">, New market</li>
+                          <li class="footer_li">, Bhopal (462022), Madhya Pradesh</li>
+                        </ul>
+                    </div>
+			
+				
+			</div>
+			
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
-						<ul class="footer_nav">
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">FAQs</a></li>
-							<li><a href="contact.html">Contact us</a></li>
-						</ul>
+						<div class="cr">©2019 All Rights Reserverd by <a href="#">BeanGate IT Solutions Pvt. Ltd.</a></div>
 					</div>
 				</div>
+               
+                
 				<div class="col-lg-6">
 					<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="footer_nav_container">
-						<div class="cr">©2018 All Rights Reserverd. Template by <a href="#">Colorlib</a></div>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 	</footer>
 
@@ -322,7 +380,7 @@
 <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+
 <script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 <script src="js/contact_custom.js"></script>
 </body>
