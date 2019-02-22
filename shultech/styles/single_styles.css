@@ -1098,13 +1098,13 @@ section
 	font-weight: 500;
 	color: #232530;
 }
-.plus,
+/*.plus,
 .minus
 {
 	padding-left: 14px;
 	padding-right: 14px;
 	cursor: pointer;
-}
+}*/
 .plus:hover,
 .minus:hover
 {

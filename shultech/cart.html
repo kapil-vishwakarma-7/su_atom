@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>ShulTech Online Ecommerce</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="shop tv,online shopping,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="styles/single_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/single_responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<style type="text/css">
+       .footer{
+             background: #212121;
+         }
+    
+.qty .count {
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    padding: 0 2px
+    ;min-width: 35px;
+    text-align: center;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    }
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font: 30px/1 Arial,sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+div {
+    text-align: center;
+}
+.minus:hover{
+    background-color: #717fe0 !important;
+}
+.plus:hover{
+    background-color: #717fe0 !important;
+}
+/*Prevent text selection*/
+span{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+input{  
+    border: 0;
+    width: 2%;
+}
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input:disabled{
+    background-color:white;
+}
+         
+</style>
+</head>
+
+<body >
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header trans_300">
+
+		<!-- Top Navigation -->
+
+		<div class="top_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="top_nav_left">free shipping</div>
+					</div>
+					<div class="col-md-6 text-right">
+						<div class="top_nav_right">
+							<ul class="top_nav_menu">
+
+								<!- My Account -->
+
+							
+								<li class="account">
+									<a href="#">
+										My Account
+										<i class="fa fa-angle-down"></i>
+									</a>
+									<ul class="account_selection">
+										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Main Navigation -->
+
+		<div class="main_nav_container">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-right">
+						<div class="logo_container">
+							<a href="#"><img src="images/logo.png" width="65"height="65" class="img-responsive"></a>
+						</div>
+						<nav class="navbar">
+							<ul class="navbar_menu">
+								<li><a href="#">home</a></li>
+								<li><a href="#">shop</a></li>
+								<!--<li><a href="#">promotion</a></li>-->
+								<li><a href="#">about</a></li>
+								<!--<li><a href="#">blog</a></li>-->
+								<li><a href="contact.html">contact</a></li>
+							</ul>
+							<ul class="navbar_user">
+								<li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+								<li class="checkout">
+									<a href="#">
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										<span id="checkout_items" class="checkout_items">2</span>
+									</a>
+								</li>
+							</ul>
+							<div class="hamburger_container">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div class="fs_menu_overlay"></div>
+
+	<!-- Hamburger Menu -->
+
+	<div class="hamburger_menu">
+		<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+		<div class="hamburger_menu_content text-right">
+			<ul class="menu_top_nav">
+				<li class="menu_item has-children">
+					<a href="#">
+						usd
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#">cad</a></li>
+						<li><a href="#">aud</a></li>
+						<li><a href="#">eur</a></li>
+						<li><a href="#">gbp</a></li>
+					</ul>
+				</li>
+				<li class="menu_item has-children">
+					<a href="#">
+						English
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#">French</a></li>
+						<li><a href="#">Italian</a></li>
+						<li><a href="#">German</a></li>
+						<li><a href="#">Spanish</a></li>
+					</ul>
+				</li>
+				<li class="menu_item has-children">
+					<a href="#">
+						My Account
+						<i class="fa fa-angle-down"></i>
+					</a>
+					<ul class="menu_selection">
+						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+					</ul>
+				</li>
+				<li class="menu_item"><a href="#">home</a></li>
+				<li class="menu_item"><a href="#">shop</a></li>
+				<li class="menu_item"><a href="#">promotion</a></li>
+				<li class="menu_item"><a href="#">pages</a></li>
+				<li class="menu_item"><a href="#">blog</a></li>
+				<li class="menu_item"><a href="#">contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container single_product_container" >
+		<div class="row">
+			<div class="col">
+
+				<!-- Breadcrumbs -->
+
+				<div class="breadcrumbs d-flex flex-row align-items-center">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="categories.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Cart</a></li>
+						<li class="active"><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Details</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8 col-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">MY CARTS <span class="text-info"> ( 2 ) </span></div>
+  <div class="panel-body">
+  	<div class="row">
+  		<div class="col-md-3 col-4 col-sm-3">
+  		<img src="https://rukminim1.flixcart.com/image/100/100/speaker/mobile-tablet-speaker/3/h/r/portronics-sound-pot-bluetooth-speaker-por-280-original-imaepvwqbv6mhbqp.jpeg?q=90"  height="100px" width="63px" >	
+  		<p class="text-warning">Remove</p>
+  		</div>
+  		<div class="col-md-5 col-8">
+  			<div class="row">
+  				<div class="col-md-12 col-9">
+  					<h5>Color TV</h5>
+  					<p>Black,flat</p>
+  				</div>
+  				<h6><b>₹1,299</b>, <del> ₹59918%</del><small> Offer Available</small></h6>
+  				
+  			</div>
+  			
+  		</div>
+  		<div class="col-md-4">
+  			<p>Delivery by, Fri Feb 15</p>
+  			<small>10 Days Replacement Policy</small>
+  		</div>
+  	</div>
+  	<hr>
+  	<div class="row">
+  		<div class="col-md-3 col-4 col-sm-3">
+  		<img src="https://rukminim1.flixcart.com/image/100/100/speaker/mobile-tablet-speaker/3/h/r/portronics-sound-pot-bluetooth-speaker-por-280-original-imaepvwqbv6mhbqp.jpeg?q=90"  height="100px" width="63px" >	
+  		</div>
+  		<div class="col-md-5 col-8">
+  			<div class="row">
+  				<div class="col-md-12 col-9">
+  					<h5>Color TV</h5>
+  					<p>Black,flat</p>
+  				</div>
+  				<h6><b>₹1,299</b>, <del> ₹59918%</del><small> Offer Available</small></h6>
+  				<div class="row">
+  					<div class="col-md-12">
+  							<div class="qty mt-5">
+                        <span class="minus bg-dark">-</span>
+                        <input type="number" class="count" name="qty" value="1">
+                        <span class="plus bg-dark">+</span>
+                    </div>
+  					</div>
+  				</div>
+  			</div>
+  			
+  		</div>
+  		<div class="col-md-4">
+  			<p>Delivery by, Fri Feb 15</p>
+  			<small>10 Days Replacement Policy</small>
+  		</div>
+  	</div>
+
+
+  </div>
+  <div class="panel-footer">
+  	<div class="row">
+  		<div class="col-md-4 offset-md-4 ">
+  			<button type="button" id="goback" class="btn btn-block"><  Continue Shopping</button>
+  		</div>
+  		<div class="col-md-4">
+  			<button type="button" class="btn btn-danger btn-block">Place Order</button>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+			</div>
+			<div class="col-lg-4">
+					<div class="panel panel-default">
+					<div class="panel-heading">PRICE DETAILS</div>
+  <div class="panel-body">
+  	<div class="row">
+  		<div class="col-md-12 col-12 col-sm-12">
+  		<div class="row">
+  			<div class="col-md-6 col-6">
+  				price ( 2 Items )
+  			</div>
+  			<div class="col-md-4 col-4 offset-2 offset-md-2 " >
+  				<b class="text-right">4825</b>
+  			</div>
+  		</div>
+  		<hr>
+  		<div class="row">
+  			<div class="col-md-6 col-6">
+  				Delivery ( Charges )
+  			</div>
+  			<div class="col-md-4 col-4 offset-2 offset-md-2 " >
+  				<b class="text-right">4825</b>
+  			</div>
+  		</div>
+  		
+  		
+  		</div>
+  		
+  		
+  	</div>
+
+  	
+
+
+  </div>
+  <div class="panel-footer">
+  	<div class="row">
+  			<div class="col-md-6 col-6">
+  				Amount Payable
+  			</div>
+  			<div class="col-md-4 col-4 offset-2 offset-md-2 " >
+  				<b class="text-right">4825</b>
+  			</div>
+  		</div>
+  </div>
+</div>			</div>
+		</div>
+
+	</div>
+
+	<!-- Tabs -->
+
+	
+
+	<!-- Benefit -->
+
+	<div class="benefit">
+		<div class="container">
+			<div class="row benefit_row">
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>free shipping</h6>
+							<p>Suffered Alteration in Some Form</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-money" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>cach on delivery</h6>
+							<p>The Internet Tend To Repeat</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-undo" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>45 days return</h6>
+							<p>Making it Look Like Readable</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 benefit_col">
+					<div class="benefit_item d-flex flex-row align-items-center">
+						<div class="benefit_icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+						<div class="benefit_content">
+							<h6>opening all week</h6>
+							<p>8AM - 09PM</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
+						<h4>Newsletter</h4>
+						<p>Subscribe to our newsletter and get 20% off your first purchase</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<form action="post">
+						<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
+							<input id="newsletter_email" type="email" placeholder="Your email" required="required" data-error="Valid email is required.">
+							<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+   
+	<footer class="footer">
+      <hr>
+		<div class="container-fluid">
+			<div class="row">
+				
+					<div class="col-lg-2">
+                    <span class="footer_top">About</span>
+                        <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">Contact </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">About </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Contact </a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                    <span class="footer_top">Help</span>
+                         <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">FAQ </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Payments </a></li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Feedback </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                    <span class="footer_top">Policy</span>
+                         <ul class="footer_ul">
+                        <li class="footer_li"><a href="#" class="footer_li_a">Terms of Use</a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Privacy </a> </li>
+                            <li class="footer_li"><a href="#" class="footer_li_a">Sitemap </a> </li>
+                        </ul>
+                    </div>
+                   <div class="col-lg-3">
+                    <span class="footer_top">Contact Info</span>
+                        <ul class="footer_ul">
+                        <li class="footer_li"><b>Mail Us: </b><a href="mailto:test@test.com" target="_blank" class="footer_li_a">support@shultech.com</a> </li>
+                            <li class="footer_li"><b>Call Us: </b>+91 9949493949, 8978541280  </li>
+                        </ul>
+                    </div>
+                <div class="col-lg-3">
+                    <span class="footer_top">Office Address</span>
+                     <ul class="footer_ul">
+                        <li class="footer_li"><b>Shop no. :</b> 21, Near Mall </li>
+                            <li class="footer_li">, New market</li>
+                          <li class="footer_li">, Bhopal (462022), Madhya Pradesh</li>
+                        </ul>
+                    </div>
+			
+				
+			</div>
+			
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+						<div class="cr">©2019 All Rights Reserverd by <a href="#">BeanGate IT Solutions Pvt. Ltd.</a></div>
+					</div>
+				</div>
+               
+                
+				<div class="col-lg-6">
+					<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="js/single_custom.js"></script>
+<script src="js/cart.js"></script>
+</body>
+
+</html>
