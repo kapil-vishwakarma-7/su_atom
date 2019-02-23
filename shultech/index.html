@@ -7,6 +7,7 @@
 <meta name="description" content="shop tv,online shopping,">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="styles/login-register.css">
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
@@ -58,8 +59,8 @@
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="account_selection">
-										<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-										<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+										<li><a data-toggle="modal" href="javascript:void(0)" onclick="openmyModal();"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -121,8 +122,8 @@
 						<i class="fa fa-angle-down"></i>
 					</a>
 					<ul class="menu_selection">
-						<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-						<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+						<li><a data-toggle="modal" href="javascript:void(0)" onclick="openmyModal();"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+										<li><a data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 					</ul>
 				</li>
 				<li class="menu_item"><a href="#">home</a></li>
@@ -593,7 +594,63 @@
 			
 		</div>
 	</footer>
-
+<!-- The Modal -->
+  <div class="modal fade login" id="myModal">
+    <div class="modal-dialog login modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="box">
+                             <div class="content">
+                                
+                                
+                                <div class="error"></div>
+                                <div class="form loginBox">
+                                    <form method="post" action="/login" accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form method="post" html="{:multipart=>true}" data-remote="true" action="/register" accept-charset="UTF-8">
+                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="forgot login-footer">
+                            <span>Looking to 
+                                 <a href="javascript: showRegisterForm();">create an account</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -603,6 +660,7 @@
 <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/login-register.js"></script>
 </body>
 
 </html>
