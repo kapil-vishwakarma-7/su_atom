@@ -8,12 +8,16 @@ $("#goback").click(function(){
 
 
 //remove item from cart
-$().click(function(){
-function removeitem(){
+$(".remove").click(function(){
 
-}	
 });
-
+//product count
+function product_count(){
+  var count = $('.product_count').length;
+  $(".p_count").html(count);
+}
+//product count call
+product_count();
 //place order
 $("#placeorder").click(function(){
 
