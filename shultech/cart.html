@@ -254,7 +254,7 @@ input:disabled{
   					<h5>Color TV</h5>
   					<p>Black,flat</p>
   				</div>
-  				<h6><b>₹1,299</b>, <del> ₹59918%</del><small> Offer Available</small></h6>
+  				<h6><b  id="pd_1">₹<span class="sum">1299</span></b>, <del> ₹59918%</del><small> Offer Available</small></h6>
   				
   			</div>
   			
@@ -269,9 +269,9 @@ input:disabled{
   		<div class="col-md-3 col-4 col-sm-3">
   		<img src="https://rukminim1.flixcart.com/image/100/100/speaker/mobile-tablet-speaker/3/h/r/portronics-sound-pot-bluetooth-speaker-por-280-original-imaepvwqbv6mhbqp.jpeg?q=90"  height="100px" width="63px" >
   		<div class="qty">
-                        <span class="minus bg-dark">-</span>
+                        <span class="minus bg-dark" id="pdm_1">-</span>
                         <input type="number" class="count" name="qty" value="1">
-                        <span class="plus bg-dark">+</span>
+                        <span class="plus bg-dark" id="pd_1">+</span>
                     </div>	
   		</div>
   		<div class="col-md-5 col-8">
@@ -280,8 +280,8 @@ input:disabled{
   					<h5>Color TV</h5>
   					<p>Black,flat</p>
   				</div>
-  				<h6><b>₹1,299</b>, <del> ₹59918%</del><small> Offer Available</small></h6>
-  				<div class="col-md-12 "><a href=""><p class="hover text-warning">Remove</p></a></div>
+  				<h6><b>₹<span class="sum">1299</span></b>, <del> ₹59918%</del><small> Offer Available</small></h6>
+  				<div class="col-md-12 "><a href="javascript:;" class="remove"><p class="hover text-warning">Remove</p></a></div>
   				
   			</div>
   			
@@ -291,7 +291,33 @@ input:disabled{
   			<small>10 Days Replacement Policy</small>
   		</div>
   	</div>
-
+<hr>
+  	<div class="row product_count">
+  		<div class="col-md-3 col-4 col-sm-3">
+  		<img src="https://rukminim1.flixcart.com/image/100/100/speaker/mobile-tablet-speaker/3/h/r/portronics-sound-pot-bluetooth-speaker-por-280-original-imaepvwqbv6mhbqp.jpeg?q=90"  height="100px" width="63px" >
+  		<div class="qty">
+                        <span class="minus bg-dark" id="pdm_1">-</span>
+                        <input type="number" class="count" id="p_count_1" name="qty" value="1">
+                        <span class="plus bg-dark" id="pd_1">+</span>
+                    </div>	
+  		</div>
+  		<div class="col-md-5 col-8">
+  			<div class="row">
+  				<div class="col-md-12 col-9">
+  					<h5>Color TV</h5>
+  					<p>Black,flat</p>
+  				</div>
+  				<h6><b>₹<span class="sum">1299</span></b>, <del> ₹59918%</del><small> Offer Available</small></h6>
+  				<div class="col-md-12 "><a href="javascript:;" class="remove"><p class="hover text-warning">Remove</p></a></div>
+  				
+  			</div>
+  			
+  		</div>
+  		<div class="col-md-4">
+  			<p>Delivery by, Fri Feb 15</p>
+  			<small>10 Days Replacement Policy</small>
+  		</div>
+  	</div>
 
   </div>
   <div class="panel-footer">
@@ -318,7 +344,7 @@ input:disabled{
   				price ( <span class="p_count"></span> Items )
   			</div>
   			<div class="col-md-4 col-4 offset-2 offset-md-2 " >
-  				<b class="text-right">4825</b>
+  				<b class="text-right"><span id="total_sum">4825</span></b>
   			</div>
   		</div>
   		<hr>

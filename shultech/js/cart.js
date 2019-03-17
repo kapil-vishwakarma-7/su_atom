@@ -9,15 +9,27 @@ $("#goback").click(function(){
 
 //remove item from cart
 $(".remove").click(function(){
-
+  $(this).closest(".product_count").remove();
+  product_count();
+  productsum();
 });
 //product count
 function product_count(){
   var count = $('.product_count').length;
   $(".p_count").html(count);
 }
+// total sum
+function productsum()
+{
+  var sum=0;
+  $(".sum").each(function() {
+    sum+=parseInt($(this).text());
+    $("#total_sum").val(sum);
+});
+}
 //product count call
 product_count();
+productsum();
 //place order
 $("#placeorder").click(function(){
 
@@ -26,6 +38,9 @@ $("#placeorder").click(function(){
 //icrement
   $('.count').prop('disabled', true);
    			$(document).on('click','.plus',function(){
+          var myId = $(this).attr('id');
+          var val_b=$("#myId").val();
+
 				$('.count').val(parseInt($('.count').val()) + 1 );
     		});
         	$(document).on('click','.minus',function(){
