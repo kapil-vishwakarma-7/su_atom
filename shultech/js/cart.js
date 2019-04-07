@@ -1,9 +1,9 @@
 $(document).ready(function(){
 //continue shopping
 $("#goback").click(function(){
-	parent.history.back();
-		return false;
-	
+  parent.history.back();
+    return false;
+  
 });
 
 
@@ -17,6 +17,16 @@ $(".remove").click(function(){
 function product_count(){
   var count = $('.product_count').length;
   $(".p_count").html(count);
+  productsum();
+}
+// total sum
+function productsum()
+{
+  var sum=0;
+  $(".sum").each(function() {
+    sum+=parseInt($(this).text());
+    $("#total_sum").html(sum);
+});
 }
 // total sum
 function productsum()
@@ -37,6 +47,20 @@ $("#placeorder").click(function(){
 
 //icrement
   $('.count').prop('disabled', true);
+
+        $(document).on('click','.plus',function(){
+          var myId = $(this).attr('id');
+          var val_b=$("#myId").val();
+
+        $('#'+myId).val(parseInt($('.count').val()) + 1 );
+        });
+          $(document).on('click','.minus',function(){
+             var myid = $(this).attr('id');
+          $('#'+myid).val(parseInt($('#'+myid).val()) - 1 );
+            if ($('.count').val() == 0) {
+            $('.count').val(1);
+          }
+            });
    			$(document).on('click','.plus',function(){
           var myId = $(this).attr('id');
           var val_b=$("#myId").val();
